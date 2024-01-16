@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar({lang , Categories}) {
-  const pathName = window.location.pathname;
+
   const checkPath = ()=> {
+    const pathName = window.location.pathname;
     if(pathName.includes('category')){
       setTimeout(() => {
         window.location.reload();
@@ -32,25 +33,25 @@ export default function Navbar({lang , Categories}) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto mb-2 mb-lg-0">
           <li className="nav-item">
-                <a className="nav-link link-light"  href="#Home">{lang == 'en'?'Home ': 'الرئيسية'}</a>
+               <Link className="nav-link link-light"  to="#Home">{lang == 'en'?'Home ': 'الرئيسية'}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link-light" href="#AboutUs">{lang == 'en' ? "About Us" :"عننا"}</a>
+                <Link className="nav-link link-light" to="#AboutUs">{lang == 'en' ? "About Us" :"عننا"}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link-light"  href="#OurServices">{lang == 'en' ? "Our Services" :"خدماتنا"}</a>
+                <Link className="nav-link link-light"  to="#OurServices">{lang == 'en' ? "Our Services" :"خدماتنا"}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link-light" href="#OurGallery">{lang == 'en' ? "Product’s Categories" :"اقسام المنتجات"}</a>
+                <Link className="nav-link link-light" to="#OurGallery">{lang == 'en' ? "Product’s Categories" :"اقسام المنتجات"}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link-light" href="#OurDatesJourney">{lang == 'en' ? "Our Dates Journey" :"رحلة مواعيدنا"}</a>
+                <Link className="nav-link link-light" to="#OurDatesJourney">{lang == 'en' ? "Our Dates Journey" :"رحلة مواعيدنا"}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link-light"  href="#OurMissinAndOurVision">{lang == 'en' ? "OurMissin And OurVision" :"مهمتنا و رؤيتنا"}</a>
+                <Link className="nav-link link-light"  to="#OurMissinAndOurVision">{lang == 'en' ? "OurMissin And OurVision" :"مهمتنا و رؤيتنا"}</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link-light" href="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</a>
+                <Link className="nav-link link-light" to="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</Link>
               </li>
             </ul>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
