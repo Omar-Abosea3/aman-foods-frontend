@@ -1,0 +1,311 @@
+@mixin transition($dur,$prop){
+    transition: $prop  $dur;
+    -o-transition: $prop  $dur;
+    -moz-transition: $prop  $dur;
+    -ms-transition: $prop  $dur;
+    -webkit-transition: $prop  $dur;
+}
+
+@font-face {
+    font-family: ExpoArabic;
+    font-weight: 400px;
+    src: url('./assets/ExpoArabic-Book.ttf');
+  }
+  body{
+    overflow-x: hidden !important;
+    font-family: ExpoArabic !important;
+  }
+nav {
+
+    .navbar-brand{
+        width: 10% !important;
+        img{
+            width: 100%;
+        }
+    }
+    ul{
+        li{
+            h4{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#nav2{
+    background-color:#70BE44; 
+    ul{
+
+        li{
+
+            a{
+                color: white !important;
+                @include transition(0.3s,all);
+                &:hover{
+                    color: rgb(255, 42, 42)!important;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+#nav1{
+
+    ul{
+
+        li{
+
+            a{
+                color: #166606 !important;
+                @include transition(0.3s,all);
+                text-align: center;
+                &:hover{
+                    color: #70BE44 !important;
+                    text-decoration: underline;
+                    text-decoration-color: #166606 !important;
+                }
+            }
+        }
+    }
+}
+
+#Home{
+    .slick-dots{
+        top:90% !important;
+        left:42% !important;
+        button::before{
+            font-size: 16px !important;
+            color: white !important;
+        }
+        .slick-active{
+            color: #166606 !important;
+        }
+    }
+    .slick-next{
+        right: 2% !important;
+        color: #166606 !important;
+        border-radius: 8px !important;
+        z-index: 9999999;
+    }
+    .slick-prev{ 
+        left: 2% !important;
+        color: #166606 !important;
+        border-radius: 8px !important;
+        z-index: 9999999;
+    }
+}
+
+#AboutUs{
+
+    h2{
+        font-size: 50px;
+        position: relative;
+        color: #70BE44;
+        &::after{
+            content: "";
+            width: 30%;
+            height: 5px;
+            position: absolute;
+            background-color: #70BE44;
+            margin: auto;
+            left:0%;
+            right: 0%;
+            top: 105%;
+        }
+    }
+    p{
+        font-size: 24px;
+    }
+}
+#OurServices{
+    h2{
+        color: #70BE44 !important;
+        font-size: 50px;
+        position: relative;
+        &::after{
+            content: "";
+            width: 15%;
+            height: 5px;
+            position: absolute;
+            background-color: #70BE44 ;
+            margin: auto;
+            left:0%;
+            right: 0%;
+            top: 105%;
+        }
+    }
+    p{
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+    }
+}
+
+#OurDatesJourney{
+
+    h2{
+        font-size: 50px;
+        color: #70BE44 !important;
+        position: relative;
+        &::after{
+            content: "";
+            width: 60%;
+            height: 5px;
+            position: absolute;
+            background-color: #70BE44 !important;
+            left:0%;
+            right: 0%;
+            margin: auto;
+            top: 105%;
+        }
+    }
+    p{
+        font-size: 24px;
+    }
+    h3{
+        color: #166606 !important;
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+}
+
+#OurGallery{
+    h2{
+        font-size: 50px;
+        position: relative;
+        color: #70BE44 !important;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 115%;
+            bottom: 0%;
+            right: 0%;
+            left: 0%;
+            width: 15%;
+            height: 5px;
+            margin: auto;
+            background-color: #70BE44;
+
+        }
+    }
+    .editIcon{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #166606;
+    }
+}
+
+#footer{
+    border-top: 5px solid #70BE44;
+    h3{
+        font-size: 25px;
+        position: relative;
+        margin-bottom: 30px !important;
+        color: #70BE44 !important;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 115%;
+            bottom: 0%;
+            right: 0%;
+            left: 0%;
+            width: 15%;
+            height: 5px;
+            margin: auto;
+            background-color: #70BE44;
+
+        } 
+    }
+    .footerIcons{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #71be4474;
+        color: #166606;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+#OurMissinAndOurVision{
+    h2{
+        font-size: 45px;
+        font-weight: 600;
+        color: #70BE44 !important;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 115%;
+            bottom: 0%;
+            right: 0%;
+            left: 0%;
+            width: 15%;
+            height: 5px;
+            margin: auto;
+            background-color: #70BE44;
+        }
+    }
+    p{
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+#ContactUs{
+    h2{
+        font-size: 45px;
+        font-weight: 600;
+        color: #70BE44 !important;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 115%;
+            bottom: 0%;
+            right: 0%;
+            left: 0%;
+            width: 15%;
+            height: 5px;
+            margin: auto;
+            background-color: #70BE44;
+        }
+    }
+}
+
+#specificCategory{
+    h2{
+        font-size: 45px;
+        font-weight: 600;
+        color: #70BE44 !important;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 115%;
+            bottom: 0%;
+            right: 0%;
+            left: 0%;
+            width: 15%;
+            height: 5px;
+            margin: auto;
+            background-color: #70BE44;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    #footer p{
+        font-size: 11px;
+    }
+}

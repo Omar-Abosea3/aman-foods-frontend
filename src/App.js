@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import './App.css';
+import './style.css';
+import Layout from './components/Layout/Layout';
+import HomeLayout from './components/Home/HomeLayout';
+import Category_Products from './components/Category/Category_Products';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const lang = localStorage.getItem('lang') || 'en';
+  console.log(lang);
+  const router = createBrowserRouter([
+    {path:'' , element:<Layout lang={lang}/> , children:[
+      {path:'' , element:<HomeLayout lang={lang} />},
+      {path:'/home' , element:<HomeLayout lang={lang} />},
+      {path:'/category/:id', element:<Category_Products lang={lang}/>}
+    ]}
+  ])
+  return <>
+    <RouterProvider router={router}/>
+  </>;
 }
 
 export default App;
