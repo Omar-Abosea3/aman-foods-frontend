@@ -13,7 +13,7 @@ import Category_Products from './components/Category/Category_Products';
 function App() {
   const lang = localStorage.getItem('lang') || 'en';
   console.log(lang);
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {path:'' , element:<Layout lang={lang}/> , children:[
       {path:'' , element:<HomeLayout lang={lang} />},
       {path:'/home' , element:<HomeLayout lang={lang} />},
