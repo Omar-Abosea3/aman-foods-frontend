@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Footer({lang , Categories}) {
+export default function Footer({lang , Categories , linkNavigation}) {
   const pathName = window.location.pathname;
   const checkPath = ()=> {
     if(pathName.includes('category')){
@@ -50,15 +50,15 @@ export default function Footer({lang , Categories}) {
                     </div>
                   </div>
                   <div className="col-lg-2 col-md-6 col-12">
-                    <div className='p-3 text-center'>
+                    <div id='footerMainLinks' className='p-3 text-center'>
                         <h3>{lang == 'en' ? 'MainLinks' : 'الاجزاء الرئيسية'}</h3>
-                        <h6><a className="nav-link" href="#Home">{lang == 'en'?'Home ': 'الرئيسية'}</a></h6>
-                        <h6><a className="nav-link" href="#AboutUs">{lang == 'en' ? "About Us" :"عننا"}</a></h6>
-                        <h6><a className="nav-link" href="#OurServices">{lang == 'en' ? "Our Services" :"خدماتنا"}</a></h6>
-                        <h6><a className="nav-link" href="#OurGallery">{lang == 'en' ? "Our Gallery" :"معرضنا"}</a></h6>
-                        <h6><a className="nav-link" href="#OurDatesJourney">{lang == 'en' ? "Our Dates Journey" :"رحلة مواعيدنا"}</a></h6>
-                        <h6><a className="nav-link" href="#OurMissinAndOurVision">{lang == 'en' ? "OurMissin And OurVision" :"مهمتنا و رؤيتنا"}</a></h6>
-                        <h6><a className="nav-link" href="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</a></h6>
+                        <h6><a className="nav-link" onClick={(e) => {linkNavigation(e)}} to="#Home">{lang == 'en'?'Home ': 'الرئيسية'}</a></h6>
+                        <h6><a className="nav-link" onClick={(e) => {linkNavigation(e)}} to="#AboutUs">{lang == 'en' ? "About Us" :"عننا"}</a></h6>
+                        <h6><a className="nav-link" onClick={(e) => {linkNavigation(e)}} to="#OurServices">{lang == 'en' ? "Our Services" :"خدماتنا"}</a></h6>
+                        <h6><a className="nav-link" onClick={(e) => {linkNavigation(e)}} to="#OurGallery">{lang == 'en' ? "Our Gallery" :"معرضنا"}</a></h6>
+                        <h6><a className="nav-link" onClick={(e) => {linkNavigation(e)}} to="#OurDatesJourney">{lang == 'en' ? "Our Dates Journey" :"رحلة مواعيدنا"}</a></h6>
+                        <h6><a className="nav-link" onClick={(e) => {linkNavigation(e)}} to="#OurMissinAndOurVision">{lang == 'en' ? "OurMissin And OurVision" :"مهمتنا و رؤيتنا"}</a></h6>
+                        <h6><a className="nav-link" onClick={(e) => {linkNavigation(e)}} to="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</a></h6>
                     </div>
                   </div>
                   <div className="col-lg-2 col-md-6 col-12">

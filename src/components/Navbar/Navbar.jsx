@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar({lang , Categories}) {
+export default function Navbar({lang , Categories , linkNavigation}) {
 
   const checkPath = ()=> {
     const pathName = window.location.pathname;
@@ -33,25 +33,25 @@ export default function Navbar({lang , Categories}) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto mb-2 mb-lg-0">
           <li className="nav-item">
-               <Link className="nav-link link-light"  to="#Home">{lang == 'en'?'Home ': 'الرئيسية'}</Link>
+               <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}}  to="#Home">{lang == 'en'?'Home ': 'الرئيسية'}</h6>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link-light" to="#AboutUs">{lang == 'en' ? "About Us" :"عننا"}</Link>
+                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}} to="#AboutUs">{lang == 'en' ? "About Us" :"عننا"}</h6>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link-light"  to="#OurServices">{lang == 'en' ? "Our Services" :"خدماتنا"}</Link>
+                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}}  to="#OurServices">{lang == 'en' ? "Our Services" :"خدماتنا"}</h6>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link-light" to="#OurGallery">{lang == 'en' ? "Product’s Categories" :"اقسام المنتجات"}</Link>
+                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}} to="#OurGallery">{lang == 'en' ? "Product’s Categories" :"اقسام المنتجات"}</h6>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link-light" to="#OurDatesJourney">{lang == 'en' ? "Our Dates Journey" :"رحلة مواعيدنا"}</Link>
+                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}} to="#OurDatesJourney">{lang == 'en' ? "Our Dates Journey" :"رحلة مواعيدنا"}</h6>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link-light"  to="#OurMissinAndOurVision">{lang == 'en' ? "OurMissin And OurVision" :"مهمتنا و رؤيتنا"}</Link>
+                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}}  to="#OurMissinAndOurVision">{lang == 'en' ? "OurMissin And OurVision" :"مهمتنا و رؤيتنا"}</h6>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link-light" to="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</Link>
+                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}} to="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</h6>
               </li>
             </ul>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">

@@ -55,10 +55,11 @@ nav {
 
         li{
 
-            a{
+            h6{
                 color: #166606 !important;
                 @include transition(0.3s,all);
                 text-align: center;
+                cursor: pointer;
                 &:hover{
                     color: #70BE44 !important;
                     text-decoration: underline;
@@ -230,6 +231,11 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    #footerMainLinks{
+        h6{
+            cursor: pointer;
+        }
     }
     
 }

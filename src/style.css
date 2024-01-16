@@ -34,7 +34,7 @@ nav ul li h4 {
   text-decoration: underline;
 }
 
-#nav1 ul li a {
+#nav1 ul li h6 {
   color: #166606 !important;
   transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -42,8 +42,9 @@ nav ul li h4 {
   -ms-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   text-align: center;
+  cursor: pointer;
 }
-#nav1 ul li a:hover {
+#nav1 ul li h6:hover {
   color: #70BE44 !important;
   text-decoration: underline;
   text-decoration-color: #166606 !important;
@@ -197,6 +198,9 @@ nav ul li h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#footer #footerMainLinks h6 {
+  cursor: pointer;
 }
 
 #OurMissinAndOurVision h2 {
