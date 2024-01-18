@@ -1,16 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar({lang , Categories , linkNavigation}) {
+export default function Navbar({lang , Categories , linkNavigation , getOneCategory}) {
 
-  const checkPath = ()=> {
-    const pathName = window.location.pathname;
-    if(pathName.includes('category')){
-      setTimeout(() => {
-        window.location.reload();
-      }, 300);
-    }
-  }
+ 
   return (
     <>
     <div className="bg-white">
@@ -78,10 +71,10 @@ export default function Navbar({lang , Categories , linkNavigation}) {
         <div className="container">
           
           <div className="w-100" >
-            <ul className="list-unstyled mb-2 mb-lg-0 d-flex justify-content-center align-items-center">
+            <ul className="list-unstyled mb-2 mb-lg-0 d-flex justify-content-between align-items-center">
               {Categories? Categories.ctegories.map(category =>
-                <li className="nav-item me-lg-5 me-md-5 me-3" key={category._id}>
-                  <Link className="nav-link link-light" onClick={checkPath}  to={`/category/${category._id}`}>{category.name}</Link>
+                <li className="nav-item me-lg-5 me-md-5" key={category._id}>
+                  <Link className="nav-link link-dark categoryLinks" onClick={()=>{getOneCategory(category._id , lang)}} to={`/category/${category._id}`}  >{category.name}</Link>
                 </li>
               ):''}
             </ul>

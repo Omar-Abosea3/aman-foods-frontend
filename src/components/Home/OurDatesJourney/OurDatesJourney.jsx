@@ -5,7 +5,7 @@ export default function OurDatesJourney({lang}) {
   return <>
     <section id='OurDatesJourney' className='my-5'>
     <div className='container-fluid py-5 px-5'>
-            <div className="row gx-0 rounded-3 shadow-lg overflow-hidden">
+            <div className="row gx-0 rounded-3 shadow-lg overflow-hidden align-items-center">
                 <div className="col-lg-6 col-md-6 col-12 ">
                     <div className='py-5 px-4 text-center'>
                         {lang == 'en'? <>
@@ -16,12 +16,12 @@ export default function OurDatesJourney({lang}) {
                             <h3 className='mb-3'>Worldwide Market</h3>
                             <p className='mb-4'>We are building up long-term relationships with Saudi Arabia market and worldwide importers /  Manufacturers of Dates industries.</p>
                         </>:<>
-                            <h2 className='mb-5 text-white'>رحلة مواعيدنا</h2>
-                            <p className='mb-4'>لقد قمنا باختيار مستوى عالٍ من معايير الجودة، وبدأنا في اختيار المخزون من المزارع العضوية للتنظيف والفرز والتعبئة والتخزين بمستوى عالٍ من المعايير يصل إلى عملائنا في جميع أنحاء العالم.</p>
-                            <h3 className='mb-3'> مصادر التواريخ</h3>
-                            <p className='mb-4'>نحن نستكشف معبراً فوق مناطق المملكة العربية السعودية للشراء مباشرة من أعظم المزارعين ومنتجي التمور.</p>
-                            <h3 className='mb-3'> السوق في جميع أنحاء العالم</h3>
-                            <p className='mb-4'>نحن نعمل على بناء علاقات طويلة الأمد مع سوق المملكة العربية السعودية والمستوردين / الشركات المصنعة لصناعات التمور في جميع أنحاء العالم.</p>
+                            <h2 className='mb-5 text-white'>رحلتنا مع التمور</h2>
+                            <p className='mb-4'>.نحن نقوم بالاختيار بمستوى عالٍ من معايير الجودة،بداية من اختيار المخزون من المزارع الطبيعية  الي كلا من  التنظيف والفرز والتعبئة والتخزين بمستوى عالٍ من المعايير حتى يصل إلى عملائنا في جميع أنحاء العالم</p>
+                            <h3 className='mb-3'>تجميع التمور</h3>
+                            <p className='mb-4'>.نحن نستكشف من خلال جميع مناطق المملكة العربية السعودية للشراء مباشرة من أعظم المزارعين ومنتجي التمور</p>
+                            <h3 className='mb-3'>السوق العالمى</h3>
+                            <p className='mb-4'>.نحن نعمل على بناء علاقات طويلة الأمد مع سوق المحلي في المملكة العربية السعودية وكذلك كل المستوردين / الشركات العاملة  في صناعات التمور في جميع أنحاء العالم</p>
                         </>}
                     </div>
                 </div>

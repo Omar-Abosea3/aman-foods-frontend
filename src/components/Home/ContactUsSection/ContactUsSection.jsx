@@ -18,6 +18,7 @@ export default function ContactUsSection({lang}) {
             console.log(error);
         }
     }
+
   return <>
     <section id="ContactUs" className="p-5 my-5">
         <form className="container m-auto">
@@ -28,7 +29,10 @@ export default function ContactUsSection({lang}) {
                 <div className="col-12 col-sm-12 col-md-12 col-lg-6 pe-2 mb-4"><input placeholder={lang == 'en'?"*Name":"الاسم*"} type="text" className="form-control MyInputs w-100"/></div>
                 <div className="col-12 col-sm-12 col-md-12 col-lg-6 mb-4"><input placeholder={lang == 'en' ? "*Email" : "البريد الالكتروني*"} id='email1' type="email" className="form-control MyInputs w-100"/></div>
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 mb-4"><textarea placeholder={lang == 'en'? "*Message For Me" : "اكتب رسالتك هنا*"} className="form-control MyInputs" rows="6"></textarea></div>
-                <div><button type='button' onClick={sendEmail} className="btn btn-outline-success">{lang == 'en' ? 'SEND MESSAGE' : 'إرسال رسالتك'}</button></div>
+                <div className='text-center mb-3'><button type='button' onClick={sendEmail} className="btn btn-outline-success">{lang == 'en' ? 'SEND MESSAGE' : 'إرسال رسالتك'}</button></div>
+                <div className='w-100 d-flex justify-content-center'>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13712.25958367301!2d31.021506!3d30.772758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeef138cd31cb3e41!2sInternational%20for%20Trading%20and%20Import!5e0!3m2!1sen!2seg!4v1644310000063!5m2!1sen!2seg"  style={{border: '0px', width: '70%'}} allowFullScreen="" loading="lazy" data-origwidth="600" data-origheight="250"></iframe>
+            </div>
             </div>
         </form>
     </section>

@@ -9,15 +9,16 @@ import './style.css';
 import Layout from './components/Layout/Layout';
 import HomeLayout from './components/Home/HomeLayout';
 import Category_Products from './components/Category/Category_Products';
+import AppContextProvider from './Context/appContextProvider';
 
 function App() {
   const lang = localStorage.getItem('lang') || 'en';
   console.log(lang);
   const router = createHashRouter([
-    {path:'' , element:<Layout lang={lang}/> , children:[
-      {path:'' , element:<HomeLayout lang={lang} />},
-      {path:'/home' , element:<HomeLayout lang={lang} />},
-      {path:'/category/:id', element:<Category_Products lang={lang}/>}
+    {path:'' , element:<AppContextProvider><Layout lang={lang}/></AppContextProvider> , children:[
+      {path:'' , element:<AppContextProvider><HomeLayout lang={lang} /> </AppContextProvider>},
+      {path:'/home' , element:<AppContextProvider> <HomeLayout lang={lang} /></AppContextProvider>},
+      {path:'/category/:id', element:<AppContextProvider><Category_Products lang={lang}/></AppContextProvider>}
     ]}
   ])
   return <>

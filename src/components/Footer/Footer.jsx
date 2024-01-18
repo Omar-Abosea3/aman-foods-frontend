@@ -1,15 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Footer({lang , Categories , linkNavigation}) {
-  const pathName = window.location.pathname;
-  const checkPath = ()=> {
-    if(pathName.includes('category')){
-      setTimeout(() => {
-        window.location.reload();
-      }, 300);
-    }
-  }
+export default function Footer({lang , Categories , linkNavigation , getOneCategory}) {
+
   return <>
         <footer id='footer'>
             <div className="container-fluid py-5">
@@ -44,9 +37,6 @@ export default function Footer({lang , Categories , linkNavigation}) {
                               <div className='pt-3 pe-2 ms-auto'><p>. <span className='fw-bold'> العنوان: </span>طريق الملك عبد العزيز، حي السالمية، بريدة 52345، المملكة العربية السعودية </p></div>
                             </div>
                         </>}
-                        <div className='w-100'>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13712.25958367301!2d31.021506!3d30.772758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeef138cd31cb3e41!2sInternational%20for%20Trading%20and%20Import!5e0!3m2!1sen!2seg!4v1644310000063!5m2!1sen!2seg"  style={{border: '0px', width: '350px', height: '200.917px'}} allowFullScreen="" loading="lazy" data-origwidth="600" data-origheight="250"></iframe>
-                        </div>
                     </div>
                   </div>
                   <div className="col-lg-2 col-md-6 col-12">
@@ -64,7 +54,7 @@ export default function Footer({lang , Categories , linkNavigation}) {
                   <div className="col-lg-2 col-md-6 col-12">
                     <div className='p-3 text-center'>
                         <h3>{lang == 'en' ? 'Categories' : 'صفحات المنتجات'}</h3>
-                        {Categories?Categories.ctegories.map(category => <h6 key={category._id}><Link className="nav-link" onClick={checkPath} to={`/category/${category._id}`}>{category.name}</Link></h6>):''}                       
+                        {Categories?Categories.ctegories.map(category => <h6 key={category._id}><Link className="nav-link" onClick={() => {getOneCategory(category._id , lang)}} to={`/category/${category._id}`}>{category.name}</Link></h6>):''}                       
                     </div>
                   </div>
 

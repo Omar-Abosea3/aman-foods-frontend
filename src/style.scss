@@ -33,13 +33,14 @@ nav {
 }
 
 #nav2{
-    background-color:#70BE44; 
+    background-color:#417920; 
     ul{
 
         li{
 
             a{
                 color: white !important;
+                font-size: x-large;
                 @include transition(0.3s,all);
                 &:hover{
                     color: rgb(255, 42, 42)!important;
@@ -315,3 +316,158 @@ nav {
         font-size: 11px;
     }
 }
+
+@media screen and (max-width:1400px) {
+    #OurGallery{
+        h3{
+            font-size: 16px;
+        }
+        figure{
+            padding: 0px !important;
+        }
+    }
+}
+@media screen and (max-width:1000px) {
+    #nav2{
+        ul{
+            li{
+                a{
+                    font-size: large;
+                }
+            }
+        }
+    }
+    #OurGallery{
+        h3{
+            font-size: 12px;
+        }
+        h2{
+            font-size: 40px;
+        }
+        figure{
+            padding: 0px !important;
+            figcaption{
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+            }
+        }
+    }
+    #AboutUs{
+        h2{
+            font-size: 35px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    #OurServices{
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    #OurDatesJourney{
+        h2{
+            font-size: 35px;
+        }
+        h3{
+            font-size: 30px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    #OurMissinAndOurVision{
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    #ContactUs{
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    #specificCategory{
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+
+}
+
+@media screen and (max-width:520px) {
+    #OurGallery{
+        h3{
+            font-size: 10px;
+        }
+        h2{
+            font-size: 25px;
+        }
+    }
+    #OurServices{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #OurDatesJourney{
+        h2{
+            font-size: 25px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #OurMissinAndOurVision{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #ContactUs{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #specificCategory{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    #AboutUs{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+

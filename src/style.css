@@ -19,10 +19,11 @@ nav ul li h4 {
 }
 
 #nav2 {
-  background-color: #70BE44;
+  background-color: #417920;
 }
 #nav2 ul li a {
   color: white !important;
+  font-size: x-large;
   transition: all 0.3s;
   -o-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -270,5 +271,119 @@ nav ul li h4 {
 @media screen and (max-width: 800px) {
   #footer p {
     font-size: 11px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #OurGallery h3 {
+    font-size: 16px;
+  }
+  #OurGallery figure {
+    padding: 0px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #nav2 ul li a {
+    font-size: large;
+  }
+  #OurGallery h3 {
+    font-size: 12px;
+  }
+  #OurGallery h2 {
+    font-size: 40px;
+  }
+  #OurGallery figure {
+    padding: 0px !important;
+  }
+  #OurGallery figure figcaption {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+  #AboutUs h2 {
+    font-size: 35px;
+  }
+  #AboutUs p {
+    font-size: 16px;
+  }
+  #OurServices h2 {
+    font-size: 40px;
+  }
+  #OurServices p {
+    font-size: 16px;
+  }
+  #OurDatesJourney h2 {
+    font-size: 35px;
+  }
+  #OurDatesJourney h3 {
+    font-size: 30px;
+  }
+  #OurDatesJourney p {
+    font-size: 16px;
+  }
+  #OurMissinAndOurVision h2 {
+    font-size: 40px;
+  }
+  #OurMissinAndOurVision p {
+    font-size: 16px;
+  }
+  #ContactUs h2 {
+    font-size: 40px;
+  }
+  #ContactUs p {
+    font-size: 16px;
+  }
+  #specificCategory h2 {
+    font-size: 40px;
+  }
+  #specificCategory p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 520px) {
+  #OurGallery h3 {
+    font-size: 10px;
+  }
+  #OurGallery h2 {
+    font-size: 25px;
+  }
+  #OurServices h2 {
+    font-size: 25px;
+  }
+  #OurServices p {
+    font-size: 14px;
+  }
+  #OurDatesJourney h2 {
+    font-size: 25px;
+  }
+  #OurDatesJourney h3 {
+    font-size: 20px;
+  }
+  #OurDatesJourney p {
+    font-size: 14px;
+  }
+  #OurMissinAndOurVision h2 {
+    font-size: 25px;
+  }
+  #OurMissinAndOurVision p {
+    font-size: 14px;
+  }
+  #ContactUs h2 {
+    font-size: 25px;
+  }
+  #ContactUs p {
+    font-size: 14px;
+  }
+  #specificCategory h2 {
+    font-size: 25px;
+  }
+  #specificCategory p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #AboutUs h2 {
+    font-size: 25px;
+  }
+  #AboutUs p {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */

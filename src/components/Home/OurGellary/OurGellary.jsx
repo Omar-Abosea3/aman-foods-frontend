@@ -62,7 +62,7 @@ export default function OurGellary({lang , Categories}) {
         <h2 className='text-center text-success mb-5'>{lang == 'en' ? 'Product’s Categories' :'اقسام المنتجات'}</h2>
         <div className="container">
             <div className="row gy-4 justify-content-center">
-                {Categories?Categories.ctegories.map(category =><div key={category._id} className="col-lg-3 col-md-4 col-sm-6 col-12">
+                {Categories?Categories.ctegories.map(category =><div key={category._id} className="col-3">
                     <figure className='mb-0 p-3 bg-white rounded-3 shadow-lg'>
                         <div className='overflow-hidden position-relative'>
                             <img src={category.image.secure_url} className='w-100 rounded-3' alt={category.name} />

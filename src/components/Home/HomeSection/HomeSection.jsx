@@ -71,11 +71,11 @@ export default function HomeSection({homeSlider}) {
     }
 
   return <>
-    <section id='Home' className='vh-100 overflow-hidden position-relative'>
-    <div onClick={()=>{openLayer()}} style={{cursor:'pointer' , zIndex:'9999999999999'}} className='position-absolute top-0 end-0 editIcon text-light bg-success p-3'><i className="fa-solid fa-ellipsis"></i></div>
+    <section id='Home' className='my-5 container shadow-lg rounded-3 overflow-hidden position-relative'>
+    {/* <div onClick={()=>{openLayer()}} style={{cursor:'pointer' , zIndex:'9999999999999'}} className='position-absolute top-0 end-0 editIcon text-light bg-success p-3'><i className="fa-solid fa-ellipsis"></i></div> */}
         <Slider {...settings}>
-          {homeSlider?homeSlider[0].images.map((image , index) => <div key={index} className='vh-100'>
-            <img src={image.secure_url} className='w-100 h-100' alt="slider1" loading='lazy' />
+          {homeSlider?homeSlider[0].images.map((image , index) => <div key={index}>
+            <img src={image.secure_url} className='w-100' alt="slider1" loading='lazy' />
           </div>):''}
         </Slider>
         <div style={{display:'none' , zIndex:'999999999'}} id={`editSlider`} className='position-fixed top-0 start-0 end-0 bottom-0 bg-dark bg-opacity-50 justify-content-center align-items-center'>

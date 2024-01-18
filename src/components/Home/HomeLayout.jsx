@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import HomeSection from './HomeSection/HomeSection'
 import OurServicesSection from './OurServicesSection/OurServicesSection'
 import AboutUsSection from './AboutUsSection/AboutUsSection'
@@ -6,41 +6,24 @@ import ContactUsSection from './ContactUsSection/ContactUsSection';
 import OurDatesJourney from './OurDatesJourney/OurDatesJourney';
 import OurGellary from './OurGellary/OurGellary';
 import OurMissionAndOurVisionSection from './OurMissionAndOurVisionSection/OurMissionAndOurVisionSection';
-import axios from 'axios';
+import LoadingScrean from '../Loading/LoadingScrean';
+import { appContext } from '../../Context/appContextProvider';
 export default function HomeLayout({lang}) {
-  const [Categories, setCategories] = useState(null);
-  const [Slider, setSlider] = useState(null);
+  const {getHomeSlider , getAllCategories , HomeSlider , AllCategories} = useContext(appContext);
 
-  async function getAllCategories(){
-    try {
-      const {data} = await axios.get(`https://aman-foods-backend.onrender.com/category?lang=${lang}`);
-      console.log(data);
-      setCategories(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  async function getHomeSlider(){
-    try {
-      const {data} = await axios.get(`https://aman-foods-backend.onrender.com/page`);
-      setSlider(data.sliders);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   useEffect(()=>{
-    getAllCategories();
+    getAllCategories(lang);
     getHomeSlider();
   },[])
   console.log(lang);
   console.log(process.env.REACT_APP_ADMINEMAIL);
   return <>
-        <HomeSection homeSlider={Slider?Slider:null} />
+        <LoadingScrean/>
+        <HomeSection homeSlider={HomeSlider?HomeSlider:null} />
         <AboutUsSection lang={lang}/>
         <OurServicesSection lang={lang}/>
-        <OurGellary lang={lang} Categories={Categories?Categories:null}/>
+        <OurGellary lang={lang} Categories={AllCategories?AllCategories:null}/>
         <OurDatesJourney lang={lang} />
         <OurMissionAndOurVisionSection lang={lang}/>
         <ContactUsSection lang={lang}/>

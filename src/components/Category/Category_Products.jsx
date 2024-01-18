@@ -1,38 +1,32 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useMemo } from 'react'
 import { useParams } from 'react-router-dom';
+import LoadingScrean from '../Loading/LoadingScrean';
+import { appContext } from '../../Context/appContextProvider';
 
 export default function Category_Products({lang}) {
-    const [Category, setCategory] = useState(null);
     const {id} = useParams();
-    async function getThisCategory(id){
-        try {
-            const {data} = await axios.get(`https://aman-foods-backend.onrender.com/category/${id}?lang=${lang}`);
-            console.log(data);
-            setCategory(data);
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    const { getOneCategory , OneCategory} = useContext(appContext);
 
-    useEffect(() => {
-        getThisCategory(id);
-    },[]);
+
+    const memo = useMemo(()=>{
+        getOneCategory(id , lang);
+    },[id])
   return <>
-        {!Category?'':<div id='specificCategory' className='py-5'>
-                <h2 className='text-center'>{Category.category.name}</h2>
+  {console.log(OneCategory)}
+        {!OneCategory?<LoadingScrean/>:<div id='specificCategory' className='py-5'>
+                <h2 className='text-center'>{OneCategory.category.name}</h2>
                 <div className="container">
                     <div className="w-100 mb-5">
                         <figure className='mb-0 w-50 m-auto rounded-3 overflow-hidden'>
-                            <img loading='lazy' src={Category.category.image.secure_url} alt={Category.category.name} className='w-100' />
+                            <img loading='lazy' src={OneCategory.category.image.secure_url} alt={OneCategory.category.name} className='w-100' />
                         </figure>
                     </div>
-                    {Category.category.Products.map(pro => <div key={pro._id} className='w-100 mb-4 text-center'>
+                    {OneCategory.category.Products.map(pro => <div key={pro._id} className='w-100 mb-4 text-center'>
                         <h3>{pro.name}</h3>    
                     </div> )}
                     <div className="w-100 mb-5">
                         <figure className='mb-0 w-50 m-auto rounded-3 overflow-hidden'>
-                            <img loading='lazy' src={Category.category.image.secure_url} alt={Category.category.name} className='w-100' />
+                            <img loading='lazy' src={OneCategory.category.image.secure_url} alt={OneCategory.category.name} className='w-100' />
                         </figure>
                     </div>
                 </div>  

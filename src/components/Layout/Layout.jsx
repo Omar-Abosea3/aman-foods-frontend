@@ -1,33 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import axios from 'axios';
 import $ from 'jquery';
+import { appContext } from '../../Context/appContextProvider';
 
 export default function Layout({lang}) {
-  const [Categories, setCategories] = useState(null);
+  const {  getOneCategory , getAllCategories , AllCategories } = useContext(appContext);
 
-  async function getAllCategories(){
-    try {
-      const {data} = await axios.get(`https://aman-foods-backend.onrender.com/category?lang=${lang}`);
-      console.log(data);
-      setCategories(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   function linkNavigation(e){
       let sectionOffsetTop=$($(e.target).attr('to')).offset().top;
       $('html,body').animate({scrollTop:sectionOffsetTop},2000);
   }
   useEffect(()=>{
-    getAllCategories();
+    getAllCategories(lang);
   },[])
   return <>
-    <Navbar lang={lang} Categories={Categories?Categories:null} linkNavigation={linkNavigation}/>
+    <Navbar lang={lang} getOneCategory={getOneCategory} Categories={AllCategories?AllCategories:null} linkNavigation={linkNavigation}/>
     <Outlet/>
-    <Footer lang={lang} Categories={Categories?Categories:null} linkNavigation={linkNavigation}/>
+    <Footer lang={lang} getOneCategory={getOneCategory} Categories={AllCategories?AllCategories:null} linkNavigation={linkNavigation}/>
   </>
 }
