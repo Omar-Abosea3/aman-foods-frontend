@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import $ from 'jquery';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 export default function AdminAuth({lang}) {
     const navigate = useNavigate();
     async function checkAdmin(){
@@ -49,6 +50,9 @@ export default function AdminAuth({lang}) {
 
     
   return <>
+    <Helmet>
+        <title>Admin Page</title>
+    </Helmet>
     <div className='py-5 my-5 d-flex justify-content-center align-items-center'>
         <form className='w-75 p-5 rounded-3 shadow-lg'>
             <h2 className='text-center mb-3'>{lang == 'en' ? 'Admin Page' : 'صفحة الأدمن'}</h2>

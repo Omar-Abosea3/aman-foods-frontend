@@ -8,6 +8,7 @@ import OurGellary from './OurGellary/OurGellary';
 import OurMissionAndOurVisionSection from './OurMissionAndOurVisionSection/OurMissionAndOurVisionSection';
 import LoadingScrean from '../Loading/LoadingScrean';
 import { appContext } from '../../Context/appContextProvider';
+import { Helmet } from 'react-helmet';
 export default function HomeLayout({lang}) {
   const {getHomeSlider , getAllCategories , HomeSlider , AllCategories} = useContext(appContext);
 
@@ -19,6 +20,9 @@ export default function HomeLayout({lang}) {
   console.log(lang);
   console.log(process.env.REACT_APP_ADMINEMAIL);
   return <>
+        <Helmet>
+          <title>Home</title>
+        </Helmet>
         <LoadingScrean/>
         <HomeSection homeSlider={HomeSlider?HomeSlider:null} />
         <AboutUsSection lang={lang}/>

@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import $ from 'jquery';
 import axios from 'axios';
 import { appContext } from '../../Context/appContextProvider';
+import { Helmet } from 'react-helmet';
 export default function Dashboard({lang}) {
     const {getHomeSlider , getAllCategories , HomeSlider , AllCategories } = useContext(appContext);
     const settings = {
@@ -352,6 +353,9 @@ export default function Dashboard({lang}) {
         }
     },[]);
   return <>
+        <Helmet>
+            <title>Dashboard</title>
+        </Helmet>
         {!HomeSlider || !AllCategories ?<LoadingScrean/>:<>
          <section id='homeSliderControl' className='p-5 my-5'>
             <div className="container shadow-lg rounded-3">
