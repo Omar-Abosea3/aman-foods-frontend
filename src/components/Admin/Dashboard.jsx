@@ -41,8 +41,10 @@ export default function Dashboard({lang}) {
     };
     const handleUpload = async (id) => {;
         const formData = new FormData();
-        for (const file of files) {
-          formData.append('slider', file);
+        if(files?.length){
+            for (const file of files) {
+                formData.append('slider', file);
+            }
         }
         console.log(formData);
         try {
@@ -58,11 +60,13 @@ export default function Dashboard({lang}) {
           $(`#sucMsg`).slideDown(300 , function(){
             setTimeout(() => {
                 $(`#sucMsg`).slideUp(300);
+                setfiles(null);
                 closeLayer();
             }, 1500);
           })
         } catch (error) {
           console.error(error);
+          setfiles(null);
           $(`#button`).html('Update Photos');
           $(`#errMsg`).slideDown(300 , function(){
             setTimeout(() => {
@@ -90,7 +94,9 @@ export default function Dashboard({lang}) {
     };
     const handleUploadCategory = async (id) => {;
         const formData = new FormData();
-        formData.append('image', file);
+        if(file){
+            formData.append('image', file);
+        }
         if($(`#categoryName${id}`).val()){
             formData.append('name' , $(`#categoryName${id}`).val())
         }
@@ -108,11 +114,13 @@ export default function Dashboard({lang}) {
           $(`#sucMsgCat${id}`).slideDown(300 , function(){
             setTimeout(() => {
                 $(`#sucMsgCat${id}`).slideUp(300);
+                setfile(null);
                 closeLayerCategory(id);
             }, 1500);
           })
         } catch (error) {
           console.error(error);
+          setfile(null);
           $(`#button${id}`).html('Update Category');
           $(`#errMsgCat${id}`).slideDown(300 , function(){
             setTimeout(() => {
@@ -140,8 +148,11 @@ export default function Dashboard({lang}) {
     };
     const handleUploadProduct = async (id , categoryId) => {
         const formData = new FormData();
-        for (const file of files) {
-            formData.append('image', file);
+        console.log(document.querySelector(`#imageInput${id}`));
+        if(files?.length){
+            for (const file of files) {
+                formData.append('image', file);
+            }
         }
         formData.append('productId' , id);
         formData.append('categoryId' , categoryId);
@@ -162,11 +173,13 @@ export default function Dashboard({lang}) {
           $(`#sucMsgPro${id}`).slideDown(300 , function(){
             setTimeout(() => {
                 $(`#sucMsgPro${id}`).slideUp(300);
+                setfiles(null);
                 closeLayerProduct(id);
             }, 1500);
           })
         } catch (error) {
           console.error(error);
+          setfiles(null);
           $(`#probutton${id}`).html('Update Product');
           $(`#errMsgPro${id}`).slideDown(300 , function(){
             setTimeout(() => {
@@ -193,7 +206,9 @@ export default function Dashboard({lang}) {
     };
     const handleUploadNewCategory = async () => {;
         const formData = new FormData();
-        formData.append('image', file);
+        if(file){
+            formData.append('image', file);
+        }
         if($(`#newCategoryName`).val()){
             formData.append('name' , $(`#newCategoryName`).val())
         }
@@ -211,11 +226,13 @@ export default function Dashboard({lang}) {
           $(`#sucMsgNewCat`).slideDown(300 , function(){
             setTimeout(() => {
                 $(`#sucMsgNewCat`).slideUp(300);
+                setfile(null);
                 closeLayerNewCategory();
             }, 1500);
           })
         } catch (error) {
           console.error(error);
+          setfile(null);
           $(`#buttonNewCat`).html('Add Category');
           $(`#errMsgNewCat`).html(error.response?.data.message);
           $(`#errMsgNewCat`).slideDown(300 , function(){
@@ -245,8 +262,10 @@ export default function Dashboard({lang}) {
     };
     const handleUploadNewProduct = async (id) => {
         const formData = new FormData();
-        for (const file of files) {
-            formData.append('image', file);
+        if(files?.length){
+            for (const file of files) {
+                formData.append('image', file);
+            }
         }
         formData.append('categoryId' , id);
         if($(`#newProductName${id}`).val()){
@@ -266,11 +285,13 @@ export default function Dashboard({lang}) {
           $(`#sucMsgNewPro${id}`).slideDown(300 , function(){
             setTimeout(() => {
                 $(`#sucMsgNewPro${id}`).slideUp(300);
-                closeLayerNewProduct();
+                setfiles(null);
+                closeLayerNewProduct(id);
             }, 1500);
           })
         } catch (error) {
           console.error(error);
+          setfiles(null);
           $(`#buttonNewPro${id}`).html('Add Product');
           $(`#errMsgNewPro${id}`).html(error.response?.data.message);
           $(`#errMsgNewPro${id}`).slideDown(300 , function(){
@@ -280,7 +301,6 @@ export default function Dashboard({lang}) {
           })
         }
     };
- 
     const closeLayerNewProduct = (id) => {
         $(`#newProduct${id}`).hide(300);
     }

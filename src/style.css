@@ -6,12 +6,10 @@
 body {
   overflow-x: hidden !important;
   font-family: ExpoArabic !important;
+  background-color: whitesmoke;
 }
 
-nav .navbar-brand {
-  width: 15% !important;
-}
-nav .navbar-brand img {
+nav img {
   width: 100%;
 }
 nav ul li h4 {
@@ -23,7 +21,7 @@ nav ul li h4 {
 }
 #nav2 ul li a {
   color: white !important;
-  font-size: x-large;
+  font-size: 22px;
   transition: all 0.3s;
   -o-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -35,8 +33,11 @@ nav ul li h4 {
   text-decoration: underline;
 }
 
+#nav1 {
+  background-color: #1A1A1A !important;
+}
 #nav1 ul li h6, #nav1 ul li a {
-  color: #166606 !important;
+  color: #70BE44 !important;
   transition: all 0.3s;
   -o-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -46,9 +47,9 @@ nav ul li h4 {
   cursor: pointer;
 }
 #nav1 ul li h6:hover, #nav1 ul li a:hover {
-  color: #70BE44 !important;
+  color: #166606 !important;
   text-decoration: underline;
-  text-decoration-color: #166606 !important;
+  text-decoration-color: #70BE44 !important;
 }
 
 #Home .slick-dots {
@@ -168,8 +169,14 @@ nav ul li h4 {
   background-color: #166606;
 }
 
+.categoryLinksContainer {
+  width: 80%;
+  margin: auto;
+}
+
 #footer {
   border-top: 5px solid #70BE44;
+  background-color: #4C4C4C;
 }
 #footer h3 {
   font-size: 25px;
@@ -189,12 +196,15 @@ nav ul li h4 {
   margin: auto;
   background-color: #70BE44;
 }
+#footer #footerContact div p {
+  color: white !important;
+}
 #footer .footerIcons {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: rgba(113, 190, 68, 0.4549019608);
-  color: #166606;
+  color: white;
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -202,6 +212,10 @@ nav ul li h4 {
 }
 #footer #footerMainLinks h6 {
   cursor: pointer;
+  color: white;
+}
+#footer #footerMainLinks a {
+  color: white !important;
 }
 
 #OurMissinAndOurVision h2 {
@@ -289,7 +303,7 @@ nav ul li h4 {
 }
 @media screen and (max-width: 1000px) {
   #nav2 ul li a {
-    font-size: large;
+    font-size: 19px;
   }
   #OurGallery h3 {
     font-size: 12px;
@@ -352,6 +366,9 @@ nav ul li h4 {
   #allcategoriesAndProductsControl button {
     font-size: 14px !important;
   }
+  #nav1 ul li h6, #nav1 ul li a {
+    font-size: 12px !important;
+  }
 }
 @media screen and (max-width: 520px) {
   #OurGallery h3 {
@@ -399,6 +416,12 @@ nav ul li h4 {
   #allcategoriesAndProductsControl button {
     font-size: 8px !important;
   }
+  #nav1 ul li h6, #nav1 ul li a {
+    font-size: 5px !important;
+  }
+  #nav2 ul li a {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 800px) {
   #AboutUs h2 {
@@ -412,5 +435,11 @@ nav ul li h4 {
   }
   #allcategoriesAndProductsControl button {
     font-size: 12px !important;
+  }
+  #nav1 ul li h6, #nav1 ul li a {
+    font-size: 8px !important;
+  }
+  #nav2 ul li a {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

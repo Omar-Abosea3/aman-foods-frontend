@@ -5,8 +5,8 @@ export default function OurDatesJourney({lang}) {
   return <>
     <section id='OurDatesJourney' className='my-5'>
     <div className='container-fluid py-5 px-5'>
-            <div className="row gx-0 rounded-3 shadow-lg overflow-hidden align-items-center">
-                <div className="col-lg-6 col-md-6 col-12 ">
+            <div className="row gx-0 rounded-3 bg-white shadow-lg overflow-hidden align-items-center">
+                <div className="col-12 ">
                     <div className='py-5 px-4 text-center'>
                         {lang == 'en'? <>
                             <h2 className='mb-5 text-white'>Our Dates Journey</h2>
@@ -25,7 +25,7 @@ export default function OurDatesJourney({lang}) {
                         </>}
                     </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-12 overflow-hidden">
+                <div className="col-12 overflow-hidden">
                     <img src={require('../../../assets/AboutUs.jpg')} className='w-100' alt="products" />
                 </div>
             </div>

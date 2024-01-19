@@ -22,7 +22,7 @@ export default function ContactUsSection({lang}) {
   return <>
     <section id="ContactUs" className="p-5 my-5">
         <form className="container m-auto">
-            <div className="row p-5 rounded-3 shadow-lg">
+            <div className="row p-5 rounded-3 bg-white shadow-lg">
                 <div className="my-5 w-100">
                     <h2 className="fw-bolder fs-1 text-center text- black">{lang == 'en' ? 'Contact Us' : 'تواصل معنا'}</h2>
                 </div>
@@ -39,9 +39,9 @@ export default function ContactUsSection({lang}) {
                     <textarea id='textarea' placeholder={lang == 'en'? "*Message For Me" : "اكتب رسالتك هنا*"} className="form-control MyInputs" rows="6"></textarea>
                 </div>
                 <div className='text-center mb-3'><button type='button' onClick={sendEmail} className="btn btn-outline-success">{lang == 'en' ? 'SEND MESSAGE' : 'إرسال رسالتك'}</button></div>
-                <div className='w-100 d-flex justify-content-center'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13712.25958367301!2d31.021506!3d30.772758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeef138cd31cb3e41!2sInternational%20for%20Trading%20and%20Import!5e0!3m2!1sen!2seg!4v1644310000063!5m2!1sen!2seg"  style={{border: '0px', width: '70%'}} allowFullScreen="" loading="lazy" data-origwidth="600" data-origheight="250"></iframe>
-            </div>
+                {/* <div className='w-100 d-flex justify-content-center'>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13712.25958367301!2d31.021506!3d30.772758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeef138cd31cb3e41!2sInternational%20for%20Trading%20and%20Import!5e0!3m2!1sen!2seg!4v1644310000063!5m2!1sen!2seg"  style={{border: '0px', width: '70%'}} allowFullScreen="" loading="lazy" data-origwidth="600" data-origheight="250"></iframe>
+                </div> */}
             </div>
         </form>
     </section>

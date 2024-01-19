@@ -7,13 +7,13 @@ export default function Footer({lang , Categories , linkNavigation }) {
         <footer id='footer'>
             <div className="container-fluid py-5">
                 <div className="row gy-4">
-                  <div className="col-lg-8 col-md-12 col-12 px-lg-5">
+                  <div id='footerContact' className="col-lg-8 col-md-12 col-12 px-lg-5">
                     <div className='p-3 text-center'>
                         <h3>{lang == 'en' ? 'Contact information' : 'معلومات التواصل'}</h3>
                         {lang == 'en' ? <>
                           <div className="d-flex align-items-center mb-2">
                             <div className='footerIcons'><i className="fa-solid fa-phone"></i></div>
-                            <div className='pt-3 ps-2'><p><span className='fw-bold'>Mobile / WhatsApp :</span> +966561283823</p></div>
+                            <div className='pt-3 ps-2'><p><span className='fw-bold'>Customers-Service/ Mobile / WhatsApp :</span> +966561283823</p></div>
                           </div>
                           <div className="d-flex align-items-center mb-2">
                             <div className='footerIcons'><i className="fa-solid fa-envelope"></i></div>
@@ -26,7 +26,7 @@ export default function Footer({lang , Categories , linkNavigation }) {
                         </> : <>
                           <div className="d-flex align-items-center flex-row-reverse justify-content-end text-end  mb-2">
                               <div className='footerIcons'><i className="fa-solid fa-phone"></i></div>
-                              <div className='pt-3 pe-2 ms-auto'><p>+966561283823 <span className='fw-bold'> :الواتساب / الموبايل</span></p></div>
+                              <div className='pt-3 pe-2 ms-auto'><p>+966561283823 <span className='fw-bold'> :  خدمة العملاء / الواتساب / الموبايل</span></p></div>
                             </div>
                             <div className="d-flex align-items-center flex-row-reverse justify-content-end text-end mb-2">
                               <div className='footerIcons'><i className="fa-solid fa-envelope"></i></div>
@@ -54,7 +54,7 @@ export default function Footer({lang , Categories , linkNavigation }) {
                   <div className="col-lg-2 col-md-6 col-12">
                     <div className='p-3 text-center'>
                         <h3>{lang == 'en' ? 'Categories' : 'صفحات المنتجات'}</h3>
-                        {Categories?Categories.ctegories.map(category => <h6 key={category._id}><Link className="nav-link"  to={`/category/${category._id}`}>{category.name}</Link></h6>):''}                       
+                        {Categories?Categories.ctegories.map(category => <h6 key={category._id}><Link className="nav-link link-light"  to={`/category/${category._id}`}>{category.name}</Link></h6>):''}                       
                     </div>
                   </div>
 
