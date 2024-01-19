@@ -63,10 +63,10 @@ export default function Navbar({lang , Categories , linkNavigation }) {
         <div className="container">
           
           <div className="w-100 px-3" >
-            <ul className="list-unstyled mb-2 mb-lg-0 categoryLinksContainer d-flex justify-content-around align-items-center">
+            <ul className="list-unstyled mb-2 mb-lg-0 categoryLinksContainer row d-flex justify-content-around align-items-center">
               {Categories? Categories.ctegories.map(category =>
-                <li className="nav-item me-lg-5 me-md-5" key={category._id}>
-                  <Link className="nav-link link-dark categoryLinks"  to={`/category/${category._id}`}  >{category.name}</Link>
+                <li className="nav-item px-2 col-3" key={category._id}>
+                  <Link className="nav-link  link-dark categoryLinks"  to={`/category/${category._id}`}  >{category.name}</Link>
                 </li>
               ):''}
             </ul>

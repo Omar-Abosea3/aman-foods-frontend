@@ -5,7 +5,7 @@ export default function Footer({lang , Categories , linkNavigation }) {
 
   return <>
         <footer id='footer'>
-            <div className="container-fluid py-5">
+            <div className="container py-5">
                 <div className="row gy-4">
                   <div id='footerContact' className="col-lg-8 col-md-12 col-12 px-lg-5">
                     <div className='p-3 text-center'>
