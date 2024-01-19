@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Footer({lang , Categories , linkNavigation , getOneCategory}) {
+export default function Footer({lang , Categories , linkNavigation }) {
 
   return <>
         <footer id='footer'>
@@ -54,7 +54,7 @@ export default function Footer({lang , Categories , linkNavigation , getOneCateg
                   <div className="col-lg-2 col-md-6 col-12">
                     <div className='p-3 text-center'>
                         <h3>{lang == 'en' ? 'Categories' : 'صفحات المنتجات'}</h3>
-                        {Categories?Categories.ctegories.map(category => <h6 key={category._id}><Link className="nav-link" onClick={() => {getOneCategory(category._id , lang)}} to={`/category/${category._id}`}>{category.name}</Link></h6>):''}                       
+                        {Categories?Categories.ctegories.map(category => <h6 key={category._id}><Link className="nav-link"  to={`/category/${category._id}`}>{category.name}</Link></h6>):''}                       
                     </div>
                   </div>
 

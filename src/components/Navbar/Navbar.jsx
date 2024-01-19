@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar({lang , Categories , linkNavigation , getOneCategory}) {
+export default function Navbar({lang , Categories , linkNavigation }) {
 
  
   return (
@@ -46,6 +46,9 @@ export default function Navbar({lang , Categories , linkNavigation , getOneCateg
               <li className="nav-item">
                 <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}} to="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</h6>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link link-light"  to={"/checkadmin"}>{lang == 'en' ? "Admin Page" :" صفحة الادمن"}</Link>
+              </li>
             </ul>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -74,7 +77,7 @@ export default function Navbar({lang , Categories , linkNavigation , getOneCateg
             <ul className="list-unstyled mb-2 mb-lg-0 d-flex justify-content-between align-items-center">
               {Categories? Categories.ctegories.map(category =>
                 <li className="nav-item me-lg-5 me-md-5" key={category._id}>
-                  <Link className="nav-link link-dark categoryLinks" onClick={()=>{getOneCategory(category._id , lang)}} to={`/category/${category._id}`}  >{category.name}</Link>
+                  <Link className="nav-link link-dark categoryLinks"  to={`/category/${category._id}`}  >{category.name}</Link>
                 </li>
               ):''}
             </ul>

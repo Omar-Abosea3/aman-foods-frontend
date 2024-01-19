@@ -11,9 +11,12 @@ export default function Layout({lang}) {
 
 
   function linkNavigation(e){
-      let sectionOffsetTop=$($(e.target).attr('to')).offset().top;
-      $('html,body').animate({scrollTop:sectionOffsetTop},2000);
-  }
+        if($($(e.target).attr('to')).offset()){
+          let sectionOffsetTop=$($(e.target).attr('to')).offset().top;
+          $('html,body').animate({scrollTop:sectionOffsetTop},2000);
+        }
+    }
+
   useEffect(()=>{
     getAllCategories(lang);
   },[])

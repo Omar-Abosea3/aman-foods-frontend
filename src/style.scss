@@ -18,7 +18,7 @@
 nav {
 
     .navbar-brand{
-        width: 10% !important;
+        width: 15% !important;
         img{
             width: 100%;
         }
@@ -56,7 +56,7 @@ nav {
 
         li{
 
-            h6{
+            h6,a{
                 color: #166606 !important;
                 @include transition(0.3s,all);
                 text-align: center;
@@ -326,6 +326,17 @@ nav {
             padding: 0px !important;
         }
     }
+    #allcategoriesAndProductsControl{
+        button{
+            margin-bottom: 10px;
+        }
+        figure{
+            figcaption h2,h3{
+                font-size: 22px !important;
+            }
+        }
+        
+    }
 }
 @media screen and (max-width:1000px) {
     #nav2{
@@ -403,13 +414,28 @@ nav {
             font-size: 16px;
         }
     }
+    #allcategoriesAndProductsControl{
+        .col-12{
+            .controlTitles{
+                font-size: 25px !important;
+            }
+        }
+        .col-3{
+            .controlTitles{
+                font-size: 25px !important;
+            }
+        }
+        button{
+            font-size: 14px !important;
+        }
+    }
 
 }
 
 @media screen and (max-width:520px) {
     #OurGallery{
         h3{
-            font-size: 10px;
+            font-size: 8px;
         }
         h2{
             font-size: 25px;
@@ -436,7 +462,7 @@ nav {
     }
     #OurMissinAndOurVision{
         h2{
-            font-size: 25px;
+            font-size: 22px;
         }
         p{
             font-size: 14px;
@@ -458,6 +484,17 @@ nav {
             font-size: 14px;
         }
     }
+
+    #allcategoriesAndProductsControl{
+        figure{
+            figcaption h2,h3{
+                font-size: 16px !important;
+            }
+        }
+        button{
+            font-size: 8px !important;
+        }
+    }
 }
 
 @media screen and (max-width:800px) {
@@ -468,6 +505,17 @@ nav {
         p{
             font-size: 14px;
         }
+    }
+    #allcategoriesAndProductsControl{
+        figure{
+            figcaption h2,h3{
+                font-size: 18px !important;
+            }
+        }
+        button{
+            font-size: 12px !important;
+        }
+        
     }
 }
 

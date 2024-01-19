@@ -9,7 +9,7 @@ body {
 }
 
 nav .navbar-brand {
-  width: 10% !important;
+  width: 15% !important;
 }
 nav .navbar-brand img {
   width: 100%;
@@ -35,7 +35,7 @@ nav ul li h4 {
   text-decoration: underline;
 }
 
-#nav1 ul li h6 {
+#nav1 ul li h6, #nav1 ul li a {
   color: #166606 !important;
   transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -45,7 +45,7 @@ nav ul li h4 {
   text-align: center;
   cursor: pointer;
 }
-#nav1 ul li h6:hover {
+#nav1 ul li h6:hover, #nav1 ul li a:hover {
   color: #70BE44 !important;
   text-decoration: underline;
   text-decoration-color: #166606 !important;
@@ -280,6 +280,12 @@ nav ul li h4 {
   #OurGallery figure {
     padding: 0px !important;
   }
+  #allcategoriesAndProductsControl button {
+    margin-bottom: 10px;
+  }
+  #allcategoriesAndProductsControl figure figcaption h2, #allcategoriesAndProductsControl figure h3 {
+    font-size: 22px !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   #nav2 ul li a {
@@ -337,10 +343,19 @@ nav ul li h4 {
   #specificCategory p {
     font-size: 16px;
   }
+  #allcategoriesAndProductsControl .col-12 .controlTitles {
+    font-size: 25px !important;
+  }
+  #allcategoriesAndProductsControl .col-3 .controlTitles {
+    font-size: 25px !important;
+  }
+  #allcategoriesAndProductsControl button {
+    font-size: 14px !important;
+  }
 }
 @media screen and (max-width: 520px) {
   #OurGallery h3 {
-    font-size: 10px;
+    font-size: 8px;
   }
   #OurGallery h2 {
     font-size: 25px;
@@ -361,7 +376,7 @@ nav ul li h4 {
     font-size: 14px;
   }
   #OurMissinAndOurVision h2 {
-    font-size: 25px;
+    font-size: 22px;
   }
   #OurMissinAndOurVision p {
     font-size: 14px;
@@ -378,6 +393,12 @@ nav ul li h4 {
   #specificCategory p {
     font-size: 14px;
   }
+  #allcategoriesAndProductsControl figure figcaption h2, #allcategoriesAndProductsControl figure h3 {
+    font-size: 16px !important;
+  }
+  #allcategoriesAndProductsControl button {
+    font-size: 8px !important;
+  }
 }
 @media screen and (max-width: 800px) {
   #AboutUs h2 {
@@ -385,5 +406,11 @@ nav ul li h4 {
   }
   #AboutUs p {
     font-size: 14px;
+  }
+  #allcategoriesAndProductsControl figure figcaption h2, #allcategoriesAndProductsControl figure h3 {
+    font-size: 18px !important;
+  }
+  #allcategoriesAndProductsControl button {
+    font-size: 12px !important;
   }
 }/*# sourceMappingURL=style.css.map */
