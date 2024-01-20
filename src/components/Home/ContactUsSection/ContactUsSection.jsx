@@ -5,15 +5,16 @@ export default function ContactUsSection({lang}) {
 
     const sendEmail = async () => {
         const userData = {
-            email:$('#email1').val(),
+            email:$('#userEmail').val(),
             text:$('textarea').val()
         }
         try {
             const {data} = await axios.post(`https://aman-foods-backend.onrender.com/sendemail`, userData);
             console.log(data);
-            setTimeout(() => {
-                window.location.reload();
-            }, 2000);
+            $('#userEmail').val('');
+            $('#userName').val('');
+            $('textarea').val('')
+                
         } catch (error) {
             console.log(error);
         }

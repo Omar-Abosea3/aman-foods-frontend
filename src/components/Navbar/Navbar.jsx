@@ -9,7 +9,7 @@ export default function Navbar({lang , Categories , linkNavigation }) {
     <div className="bg-white">
       <nav className="navbar-expand bg-light" id="nav1">
         <div className="container d-flex justify-content-between align-items-center">
-          <Link className="w-25" to={"/"}>
+          <Link className="navImage" to={"/"}>
             <img src={require('../../assets/logo.png')}  loading="lazy"/>
           </Link>
           <div className="d-flex flex-wrap" >

@@ -9,7 +9,10 @@ body {
   background-color: whitesmoke;
 }
 
-nav img {
+nav .navImage {
+  width: 25%;
+}
+nav .navImage img {
   width: 100%;
 }
 nav ul li h4 {
@@ -417,10 +420,10 @@ nav ul li h4 {
     font-size: 8px !important;
   }
   #nav1 ul li h6, #nav1 ul li a {
-    font-size: 5px !important;
+    font-size: 2px !important;
   }
   #nav2 ul li a {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -436,10 +439,13 @@ nav ul li h4 {
   #allcategoriesAndProductsControl button {
     font-size: 12px !important;
   }
+  #nav1 .navImage {
+    width: 50%;
+  }
   #nav1 ul li h6, #nav1 ul li a {
-    font-size: 8px !important;
+    font-size: 4px !important;
   }
   #nav2 ul li a {
-    font-size: 16px;
+    font-size: 8px;
   }
 }/*# sourceMappingURL=style.css.map */
