@@ -285,6 +285,10 @@ nav ul li h4 {
   background-color: #70BE44;
 }
 
+.categoryProductsSize h3 {
+  font-size: 16px !important;
+}
+
 @media screen and (max-width: 800px) {
   #footer p {
     font-size: 11px;
@@ -372,6 +376,9 @@ nav ul li h4 {
   #nav1 ul li h6, #nav1 ul li a {
     font-size: 12px !important;
   }
+  .categoryProductsSize h3 {
+    font-size: 12px !important;
+  }
 }
 @media screen and (max-width: 520px) {
   #OurGallery h3 {
@@ -447,5 +454,8 @@ nav ul li h4 {
   }
   #nav2 ul li a {
     font-size: 8px;
+  }
+  .categoryProductsSize h3 {
+    font-size: 8px !important;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -323,6 +323,12 @@ nav{
         }
     }
 }
+.categoryProductsSize{
+    h3{
+        font-size: 16px !important;
+    }
+}
+
 
 @media screen and (max-width:800px) {
     #footer p{
@@ -455,7 +461,11 @@ nav{
             }
         }
     }
-
+    .categoryProductsSize{
+        h3{
+            font-size: 12px !important;
+        }
+    }
 }
 
 @media screen and (max-width:520px) {
@@ -577,8 +587,6 @@ nav{
             }
         }
     }
-
-
     #nav2{
         ul{
             li{
@@ -586,6 +594,11 @@ nav{
                     font-size: 8px;
                 }
             }
+        }
+    }
+    .categoryProductsSize{
+        h3{
+            font-size: 8px !important;
         }
     }
 }
