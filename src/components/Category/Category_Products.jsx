@@ -121,21 +121,20 @@ export default function Category_Products({lang}) {
                     <h5 className="mb-2">- Indonesia Coffee Beans</h5>
                     <h5 className="mb-2">- Vietnam Coffee Beans</h5>
                   </div>
-                ) : OneCategory.category.name == "Grains And Pulses" ? (
-                  <div className="text-start">
-                    <h3 className="mb-3">
-                      We are sourcing and supplying wide range of Most
-                      well-Known Dates of Kingdom of Saudi Arabia Dates :
-                    </h3>
-                    <h5 className="mb-2">- Sukkari Al-Qassim dates</h5>
-                    <h5 className="mb-2">- Ajwa Medina dates</h5>
-                    <h5 className="mb-2">- Magdool dates</h5>
-                    <h5 className="mb-2">- Sagai dates</h5>
-                    <h5 className="mb-2">- Khadrawy dates</h5>
-                    <h5 className="mb-2">- Mabroom dates</h5>
-                  </div>
                 ) : (
-                  ""
+                  <div className="text-start">
+                    {console.log(OneCategory.category.name)}
+                    <h3 className="mb-3">
+                    We are sourcing and suppling many thanks of Grains and pulses
+                    wideworld range :{" "}
+                    </h3>
+                    <h5 className="mb-2">- Whole Fava Beans</h5>
+                    <h5 className="mb-2">- Split Fava Beans</h5>
+                    <h5 className="mb-2">- Chickpeas</h5>
+                    <h5 className="mb-2">- White Kidney Beans</h5>
+                    <h5 className="mb-2">- Black-eyed beans</h5>
+                    <h5 className="mb-2">- Lentils</h5>
+                  </div>
                 )}
               </div>
               <div className="text-success text-center mb-4">
