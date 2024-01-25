@@ -69,7 +69,7 @@ export default function Category_Products({lang}) {
                     <h5 className="mb-2">حبوب قهوة الهند -</h5>
                     <h5 className="mb-2">حبوب قهوة إثيوبيا-</h5>
                   </div>
-                ) : OneCategory.category.name == "الحبوب والبقول" ? (
+                ) : OneCategory.category.name == "الحبوب و البقوليات" ? (
                   <div className="text-end">
                     <h3 className="mb-3">
                       {" "}
