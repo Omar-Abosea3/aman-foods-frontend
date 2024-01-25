@@ -24,7 +24,7 @@ export default function Category_Products({lang}) {
           <div id="specificCategory" className="py-5">
             <h2 className="text-center">{OneCategory.category.name}</h2>
             <div className="container">
-              <div className="w-100 mb-5">
+              <div className="w-100 mb-5 categoryText">
                 {/* <figure className='mb-0 w-50 m-auto rounded-3 overflow-hidden'>
                                 <img loading='lazy' src={OneCategory.category.image.secure_url} alt={OneCategory.category.name} className='w-100' />
                             </figure> */}

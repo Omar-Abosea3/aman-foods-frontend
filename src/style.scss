@@ -323,12 +323,12 @@ nav{
         }
     }
 }
+
 .categoryProductsSize{
     h3{
         font-size: 16px !important;
     }
 }
-
 
 @media screen and (max-width:800px) {
     #footer p{
@@ -356,7 +356,11 @@ nav{
         }
         
     }
-
+    .categoryProductsSize{
+        h3{
+            font-size: 16px !important;
+        }
+    }
     
 }
 @media screen and (max-width:1000px) {
@@ -466,6 +470,72 @@ nav{
             font-size: 12px !important;
         }
     }
+    .categoryText{
+        h3{
+            font-size: 20px !important;
+        }
+        h5{
+            font-size: 17px !important;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    #AboutUs{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    #allcategoriesAndProductsControl{
+        figure{
+            figcaption h2,h3{
+                font-size: 18px !important;
+            }
+        }
+        button{
+            font-size: 12px !important;
+        }
+        
+    }
+    #nav1{
+        .navImage{
+            width: 50%;
+        }
+        ul{
+    
+            li{
+    
+                h6,a{
+                    font-size: 4px !important;
+                }
+            }
+        }
+    }
+    #nav2{
+        ul{
+            li{
+                a{
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+    .categoryProductsSize{
+        h3{
+            font-size: 8px !important;
+        }
+    }
+    .categoryText{
+        h3{
+            font-size: 14px !important;
+        }
+        h5{
+            font-size: 12px !important;
+        }
+    }
 }
 
 @media screen and (max-width:520px) {
@@ -551,55 +621,31 @@ nav{
             }
         }
     }
-}
-
-@media screen and (max-width:800px) {
-    #AboutUs{
-        h2{
-            font-size: 25px;
-        }
-        p{
-            font-size: 14px;
-        }
-    }
-    #allcategoriesAndProductsControl{
-        figure{
-            figcaption h2,h3{
-                font-size: 18px !important;
-            }
-        }
-        button{
-            font-size: 12px !important;
-        }
-        
-    }
-    #nav1{
-        .navImage{
-            width: 50%;
-        }
-        ul{
-    
-            li{
-    
-                h6,a{
-                    font-size: 4px !important;
-                }
-            }
-        }
-    }
-    #nav2{
-        ul{
-            li{
-                a{
-                    font-size: 8px;
-                }
-            }
-        }
-    }
     .categoryProductsSize{
+        h3{
+            font-size: 4px !important;
+        }
+    } 
+
+    footer{
+        p{
+            font-size: 8px !important;
+        }
+        .footerIcons{
+            width: 30px !important;
+            height: 30px !important;
+            font-size: 10px !important;
+        }
+    }
+    .categoryText{
         h3{
             font-size: 8px !important;
         }
+        h5{
+            font-size: 6px !important;
+        }
     }
 }
+
+
 

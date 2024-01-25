@@ -14,7 +14,7 @@ export default function AdminAuth({lang}) {
         console.log(userData);
 
         if (
-            userData.email.toString() !== process.env.REACT_APP_ADMINEMAIL.toString() &&
+            userData.email.toString() !== process.env.REACT_APP_ADMINEMAIL.toString() ||
             userData.password.toString() !== process.env.REACT_APP_ADMINPASSWORD.toString()
         ) {
             $(`#adminBtn`).html(`${lang == 'en'? 'check admin' : 'التحقق من الأدمن'}`);

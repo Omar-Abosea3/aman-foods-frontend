@@ -307,6 +307,9 @@ nav ul li h4 {
   #allcategoriesAndProductsControl figure figcaption h2, #allcategoriesAndProductsControl figure h3 {
     font-size: 22px !important;
   }
+  .categoryProductsSize h3 {
+    font-size: 16px !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   #nav2 ul li a {
@@ -379,6 +382,44 @@ nav ul li h4 {
   .categoryProductsSize h3 {
     font-size: 12px !important;
   }
+  .categoryText h3 {
+    font-size: 20px !important;
+  }
+  .categoryText h5 {
+    font-size: 17px !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  #AboutUs h2 {
+    font-size: 25px;
+  }
+  #AboutUs p {
+    font-size: 14px;
+  }
+  #allcategoriesAndProductsControl figure figcaption h2, #allcategoriesAndProductsControl figure h3 {
+    font-size: 18px !important;
+  }
+  #allcategoriesAndProductsControl button {
+    font-size: 12px !important;
+  }
+  #nav1 .navImage {
+    width: 50%;
+  }
+  #nav1 ul li h6, #nav1 ul li a {
+    font-size: 4px !important;
+  }
+  #nav2 ul li a {
+    font-size: 8px;
+  }
+  .categoryProductsSize h3 {
+    font-size: 8px !important;
+  }
+  .categoryText h3 {
+    font-size: 14px !important;
+  }
+  .categoryText h5 {
+    font-size: 12px !important;
+  }
 }
 @media screen and (max-width: 520px) {
   #OurGallery h3 {
@@ -432,30 +473,21 @@ nav ul li h4 {
   #nav2 ul li a {
     font-size: 10px;
   }
-}
-@media screen and (max-width: 800px) {
-  #AboutUs h2 {
-    font-size: 25px;
-  }
-  #AboutUs p {
-    font-size: 14px;
-  }
-  #allcategoriesAndProductsControl figure figcaption h2, #allcategoriesAndProductsControl figure h3 {
-    font-size: 18px !important;
-  }
-  #allcategoriesAndProductsControl button {
-    font-size: 12px !important;
-  }
-  #nav1 .navImage {
-    width: 50%;
-  }
-  #nav1 ul li h6, #nav1 ul li a {
+  .categoryProductsSize h3 {
     font-size: 4px !important;
   }
-  #nav2 ul li a {
-    font-size: 8px;
-  }
-  .categoryProductsSize h3 {
+  footer p {
     font-size: 8px !important;
+  }
+  footer .footerIcons {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 10px !important;
+  }
+  .categoryText h3 {
+    font-size: 8px !important;
+  }
+  .categoryText h5 {
+    font-size: 6px !important;
   }
 }/*# sourceMappingURL=style.css.map */

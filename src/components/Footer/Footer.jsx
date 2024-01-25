@@ -13,7 +13,7 @@ export default function Footer({lang , Categories , linkNavigation }) {
                         {lang == 'en' ? <>
                           <div className="d-flex align-items-center mb-2">
                             <div className='footerIcons'><i className="fa-solid fa-phone"></i></div>
-                            <div className='pt-3 ps-2'><p><span className='fw-bold'>Customers-Service/ Mobile / WhatsApp :</span> +966561283823</p></div>
+                            <div className='pt-3 ps-2'><p><span className='fw-bold'>Customers-Service/ Mobile / WhatsApp :</span> +966 (0) 561283823</p></div>
                           </div>
                           <div className="d-flex align-items-center mb-2">
                             <div className='footerIcons'><i className="fa-solid fa-envelope"></i></div>
@@ -26,7 +26,7 @@ export default function Footer({lang , Categories , linkNavigation }) {
                         </> : <>
                           <div className="d-flex align-items-center flex-row-reverse justify-content-end text-end  mb-2">
                               <div className='footerIcons'><i className="fa-solid fa-phone"></i></div>
-                              <div className='pt-3 pe-2 ms-auto'><p>+966561283823 <span className='fw-bold'> :  خدمة العملاء / الواتساب / الموبايل</span></p></div>
+                              <div className='pt-3 pe-2 ms-auto'><p>+966 (0) 561283823 <span className='fw-bold'> :  خدمة العملاء / الواتساب / الموبايل</span></p></div>
                             </div>
                             <div className="d-flex align-items-center flex-row-reverse justify-content-end text-end mb-2">
                               <div className='footerIcons'><i className="fa-solid fa-envelope"></i></div>
