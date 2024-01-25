@@ -33,7 +33,7 @@ export default function Navbar({lang , Categories , linkNavigation }) {
                 <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}}  to="#OurMissinAndOurVision">{lang == 'en' ? "Missin And Vision" :"مهمتنا و رؤيتنا"}</h6>
               </li>
               <li className="nav-item px-2">
-                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}} to="#CountactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</h6>
+                <h6 className="nav-link link-light" onClick={(e) => {linkNavigation(e)}} to="#ContactUs">{lang == 'en' ? "Countact Us" :"تواصل معنا"}</h6>
               </li>
               <li className="nav-item px-2">
                 <h6><Link className="nav-link link-light mt-0"  to={"/checkadmin"}>{lang == 'en' ? "Admin Page" :" صفحة الادمن"}</Link></h6>
